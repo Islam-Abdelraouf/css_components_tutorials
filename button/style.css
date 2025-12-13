@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1D202A;
+}
+
+.card{
+    width: 600px;
+}
+
+.card-header{
+    padding: 20px;
+    background-color: #fff;
+    color: #1D202A;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 100px;
+    border: 1px solid #fff;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.btn {
+    padding: 1rem 4rem;
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    --ripple-color: rgba(255, 255, 255, 0.55);
+}
+.btn:hover{
+    /* font-size: 1.32rem; */
+    font-weight: 600;
+}
+
+.btn-success {
+    --ripple-color: rgba(177, 251, 176, 0.55);
+    background: linear-gradient(60deg, #008235, #7BF1A8);
+    color: white;
+}
+
+.btn-primary {
+    --ripple-color: rgba(176, 230, 251, 0.55);
+    background: linear-gradient(60deg, #0004ff, #0da8f0);
+    color: white;
+}
+
+.btn-dark {
+    --ripple-color: rgb(255, 255, 255);
+    background: linear-gradient(60deg, #1D202A, #90A1B9);
+    color: white;
+}
+
+.btn-light {
+    --ripple-color: rgba(152, 78, 248, 0.87);
+    background: linear-gradient(60deg, #afafaf, #ffffff);
+    color: rgb(55, 2, 126);
+}
+
+.btn-danger {
+    --ripple-color: rgba(253, 235, 235, 0.767);
+    background: linear-gradient(60deg, #ff0000, #ffbbbb);
+    color: white;
+}
+
+.btn-fuchsia {
+    --ripple-color: rgba(237, 174, 253, 0.55);
+    background: linear-gradient(60deg, #A800B7, #F3A8FF);
+    color: white;
+}
+
+.ripple {
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: var(--ripple-color);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animation 400ms linear;
+    mix-blend-mode: overlay;
+}
+
+.rounded-1 {
+    border-radius: 5px;
+}
+.rounded-2 {
+    border-radius: 10px;
+}
+.rounded-3 {
+    border-radius: 15px;
+}
+.rounded-4 {
+    border-radius: 20px;
+}
+.rounded-5 {
+    border-radius: 30px;
+}
+
+@keyframes animation {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    to {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+    }
+}
